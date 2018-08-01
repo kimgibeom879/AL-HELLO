@@ -18,7 +18,7 @@ int spacings1[]={};
 void setup() {
   
   Serial.begin(9600);
-  pinMode(3,INPUT);
+  pinMode(3,INPUT_PULLUP);
   pinMode(8,OUTPUT);
   Serial.println("Welcome to the karaoke.Push the button to activate the karaoke.\n");
   
@@ -54,7 +54,11 @@ void verse(int PIN){
   
   if(a=="123"){
     
-    
+    for(int x=0;x<50;x++){
+      
+      tone(PIN,notes1[x],noteDurations1[x]);Serial.print(lyrics1[x]);delay(500);
+      
+    }
     
   }
   else if(a=="121"){
