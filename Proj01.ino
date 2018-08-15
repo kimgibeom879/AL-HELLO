@@ -14,7 +14,7 @@ void setup() {
   Serial.begin(9600);
   pinMode(3,INPUT_PULLUP);
   pinMode(8,OUTPUT);
-  Serial.println("Welcome to the karaoke.Push the button to activate the karaoke.\n");
+  Serial.println("Welcome to the karaoke.Push the button to activate the karaoke.\n\n\nCountry Roads: 123\nsong2: 456\nsong3: 789\n");
   
 }
 
@@ -61,19 +61,19 @@ void loop() {
 
 void verse(int PIN){
   
-  if(a=="Country Roads"){
+  if(a=="123"){
 
     for(int x=0;x<86;x++){
       tone(PIN,notes1[x],noteDurations1[x]);Serial.print(lyrics1[x]);delay(spacings1[x]);
     }
     
     }
-  else if(a=="song2"){
+  else if(a=="456"){
     
     Serial.println('b');
     
     }
-  else if(a=="Song3"){
+  else if(a=="789"){
     
     Serial.println('c');
     
